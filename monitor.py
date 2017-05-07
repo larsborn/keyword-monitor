@@ -22,7 +22,7 @@ class Sink(object):
 class Searx(Source):
     def query(self, keyword):
         params = {
-            'q': keyword,
+            'q': '"%s"' % keyword,
             'categories': 'general',
             'time_range': 'day',
             'format': 'json',
